@@ -1,7 +1,9 @@
 {
   "autoload": {
     "psr-4": {
-       "": "src/"
+      "Compose\\": "src/Compose",
+      "Rules\\": "src/Rules",
+      "Utils\\": "src/Utils"
     }
   }
 }
