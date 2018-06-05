@@ -12,8 +12,8 @@ use Utils\ClassUtils;
 use Utils\Formatter;
 
 $class = $_GET['identification'];
-$data = $_GET['data'];
-if (!(isset($class) && isset($data))) {
+parse_str($_SERVER['QUERY_STRING'], $data);
+if (!(isset($class))) {
     Formatter::jsonFormat(NULL, 400, 'No address given');
 }
 
