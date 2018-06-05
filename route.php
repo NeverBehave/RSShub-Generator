@@ -6,22 +6,23 @@
  * Time: 下午1:55
  */
 
-$route = [];
-$route['bilibili.com'] = [
+/**
+ * 规则：域名，前缀，方法
+ */
+return [
+    'bilibili.com' => [
 
-];
-$route['www.dapenti.com'] = [
-    'directory' => 'Dapenti',
-    'methods' => ['Dapenti']
-];
-$route['jandan.net'] = [
-    'directory' => 'Jiandan',
-    'methods' => ['Jiandan'],
-];
-$route['github.com'] = [
-    'directory' => 'Github',
-    'methods' => [
-        'GithubUser',
-        'GithubTrending'
+    ],
+    'dapenti.com' => [
+        'www' => ['Dapenti']
+    ],
+    'jandan.net' => [
+        '' => ['Jiandan'],
+    ],
+    'github.com' => [
+        '' => [
+            'GithubUser',
+            'GithubTrending'
+        ],
     ]
 ];

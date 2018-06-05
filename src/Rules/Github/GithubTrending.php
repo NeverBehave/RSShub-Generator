@@ -10,21 +10,6 @@ namespace Rules;
 
 class GithubTrending extends Base
 {
-    public function name(): string
-    {
-        return 'Github Trending';
-    }
-
-    public function description(): string
-    {
-        return '获得特定语言的热门仓库';
-    }
-
-    public function docs(): string
-    {
-        return 'https://docs.rsshub.app/#trending';
-    }
-
     public function validate(): bool
     {
         if (
@@ -37,11 +22,14 @@ class GithubTrending extends Base
         return false;
     }
 
-    public function compose(): string
+    public function compose(): array
     {
         $language = $this->parsed->slash[1];
         $frequency = $this->parsed->query['since'];
 
-        return $this->baseUrl . "github/trending/$frequency/$language";
+        return [
+            'since' => $frequency,
+            'language' => $language
+        ];
     }
 }
