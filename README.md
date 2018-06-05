@@ -1,6 +1,10 @@
 # RSShub-Generator
 Generate RSShub link with ease
 
+# 支持文档
+
+- `Docs.md`
+
 # Note
 
 - Rules：用于解析链接并生成对应Compose 可接受的Array
