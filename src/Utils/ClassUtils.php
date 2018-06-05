@@ -50,7 +50,7 @@ class ClassUtils
      */
     public static function getComposeClassInfo($class)
     {
-        if (strpos($class, '\\') === false) {
+        if (is_string($class) && strpos($class, '\\') === false) {
             $class = 'Compose\\' . $class;
         }
         return [
