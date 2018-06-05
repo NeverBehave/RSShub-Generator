@@ -3,41 +3,39 @@
  * Created by PhpStorm.
  * User: neverbehave
  * Date: 2018/5/30
- * Time: 下午2:59
+ * Time: 下午2:26
  */
 
 namespace Compose;
 
-class GithubTrending extends Base
+class UUNovel extends Base
 {
     public static function name(): string
     {
-        return 'Github Trending';
+        return 'UU小说章节';
     }
 
     public static function description(): string
     {
-        return '获得特定语言的热门仓库';
+        return '获取小说章节';
     }
 
     public static function docs(): string
     {
-        return 'https://docs.rsshub.app/#trending';
+        return 'https://docs.rsshub.app/#小说章节-2';
     }
 
     public static function parameters(): array
     {
         return [
-            'since' => ['required'],
-            'language' => ['optional']
+            'id' => ['number']
         ];
     }
 
     public function compose(): string
     {
-        $language = $this->data['language'];
-        $frequency = $this->data['since'];
+        $id = $this->data['id'];
 
-        return "github/trending/$frequency/$language";
+        return "uukanshu/chapter/$id";
     }
 }

@@ -66,8 +66,8 @@ abstract class Base
     /**
      * Get all required parameters
      * ['key' => ['type', (optional) value]]
-     * type: number, string, required, regex, within
-     * value: (string)regex, (array)within
+     * type: number, string, required, regex, within, optional
+     * value: (string)regex, (array)withinl
      * @return array
      */
     public static abstract function parameters(): array;
@@ -92,6 +92,9 @@ abstract class Base
                     break;
                 case 'within':
                     if (!in_array($this->data[$key], $value[1])) return false;
+                    break;
+                case 'optional':
+                    break;
                 default:
                     return false;
             }
