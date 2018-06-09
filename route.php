@@ -24,5 +24,10 @@ return [
             'GithubUser',
             'GithubTrending'
         ],
+    ],
+    'twitter.com' => [
+        '' => [
+            'TwitterUser'
+        ]
     ]
 ];
