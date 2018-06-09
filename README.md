@@ -3,8 +3,8 @@ Generate RSShub link with ease
 
 # 支持文档
 
-- `[Docs.md](blob/master/docs/Docs.md)`
-- `[Endpoint.md](blob/master/docs/Endpoint.md)`
+- [Docs.md](blob/master/docs/Docs.md)
+- [Endpoint.md](blob/master/docs/Endpoint.md)
 
 # Note
 
